@@ -263,8 +263,9 @@ if (sessionStorage.getItem(SESSION_KEY)) {
   location.replace('index.html');
 }
 
-let failCount  = parseInt(localStorage.getItem('hjh_fail_count')  || '0');
-let lockedUntil = parseInt(localStorage.getItem('hjh_locked_until') || '0');
+// 锁定仅在当前页面会话内有效，刷新页面即可重置
+let failCount  = 0;
+let lockedUntil = 0;
 
 // 页面加载时检查锁定状态
 checkLock();
@@ -285,14 +286,12 @@ function startLockTimer() {
   warn.classList.add('show');
 
   const timer = setInterval(() => {
-    const remain = Math.ceil((lockedUntil - Date.now()) / 1000);
+    const remain = Math.ceil((lockedUntil - Date.now())  / 1000);
     if (remain <= 0) {
       clearInterval(timer);
       btn.disabled = false;
       warn.classList.remove('show');
       failCount = 0;
-      localStorage.removeItem('hjh_fail_count');
-      localStorage.removeItem('hjh_locked_until');
     } else {
       cd.textContent = remain;
     }
@@ -319,8 +318,7 @@ function handleLogin(e) {
     if (user) {
       // 登录成功
       failCount = 0;
-      localStorage.removeItem('hjh_fail_count');
-      localStorage.removeItem('hjh_locked_until');
+      lockedUntil = 0;
 
       // 生成简单 token（格式: base64(username:timestamp)）
       const token = btoa(username + ':' + Date.now() + ':' + user.role);
@@ -332,11 +330,9 @@ function handleLogin(e) {
     } else {
       // 登录失败
       failCount++;
-      localStorage.setItem('hjh_fail_count', failCount);
 
       if (failCount >= MAX_FAIL) {
         lockedUntil = Date.now() + LOCK_SECONDS * 1000;
-        localStorage.setItem('hjh_locked_until', lockedUntil);
         startLockTimer();
       }
 
