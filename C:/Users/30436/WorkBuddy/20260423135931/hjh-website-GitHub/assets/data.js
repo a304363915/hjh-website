@@ -27,6 +27,7 @@ const SiteData = {
     {
       id: 1, category: '相机标定', cat_key: 'calibration',
       name: '高精度棋盘格标定板', emoji: '📷',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#fff3e0,#ffe0b2)',
       desc: '专业级棋盘格相机标定靶，高对比度印刷，角点提取精准，适用于各类视觉系统。',
       tags: ['机器视觉', '自动驾驶', '3D检测'],
@@ -34,6 +35,7 @@ const SiteData = {
     {
       id: 2, category: '精密大理石', cat_key: 'marble',
       name: '精密大理石平台', emoji: '🪨',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#e8f4fd,#dbeafe)',
       desc: '优质天然大理石制作，平面精度高，热膨胀系数小，广泛用于精密测量与检测。',
       tags: ['测量平台', '精密检测', '工业制造'],
@@ -41,6 +43,7 @@ const SiteData = {
     {
       id: 3, category: '贸易产品', cat_key: 'trade',
       name: '工业传感器及控制系统', emoji: '🔧',
+      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#e8f8e8,#dcfce7)',
       desc: '各类工业传感器、控制模块及配套系统，为自动化生产线提供可靠的检测控制方案。',
       tags: ['传感器', '控制系统', '自动化'],
@@ -48,6 +51,7 @@ const SiteData = {
     {
       id: 4, category: '相机标定', cat_key: 'calibration',
       name: 'ArUco 码标定靶', emoji: '🎯',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#f3e5f5,#ede9fe)',
       desc: 'ArUco / ChArUco 标定靶，支持多标定板组合，适用于大视场及机器人手眼标定。',
       tags: ['机器人', '手眼标定', '大视场'],
@@ -55,6 +59,7 @@ const SiteData = {
     {
       id: 5, category: '精密大理石', cat_key: 'marble',
       name: '大理石检测靠铁套件', emoji: '📐',
+      image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#e0f7fa,#cffafe)',
       desc: '配套大理石检测靠铁、直角尺、V型铁等精密工具，满足工件三维测量需求。',
       tags: ['三维测量', '检测工具', '精密仪器'],
@@ -62,6 +67,7 @@ const SiteData = {
     {
       id: 6, category: '贸易产品', cat_key: 'trade',
       name: '智能仪器仪表系列', emoji: '⚗️',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#fce4ec,#ffe4e6)',
       desc: '涵盖温度、压力、流量等多类智能仪表，支持数据采集与工业通信协议对接。',
       tags: ['智能仪表', '数据采集', 'Modbus'],
@@ -69,6 +75,7 @@ const SiteData = {
     {
       id: 7, category: '技术服务', cat_key: 'service',
       name: '机器视觉系统集成', emoji: '👁',
+      image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#fff9c4,#fef9c3)',
       desc: '提供从相机选型、镜头匹配到标定软件的全链路机器视觉系统集成服务。',
       tags: ['视觉集成', '算法开发', '标定服务'],
@@ -76,6 +83,7 @@ const SiteData = {
     {
       id: 8, category: '贸易产品', cat_key: 'trade',
       name: '工业模具及零部件', emoji: '⚙️',
+      image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#e8f4fd,#bfdbfe)',
       desc: '各类工业模具、机械零部件的销售与定制服务，满足制造业多样化采购需求。',
       tags: ['模具', '零部件', '定制加工'],
@@ -83,6 +91,7 @@ const SiteData = {
     {
       id: 9, category: '技术服务', cat_key: 'service',
       name: '企业数字化技术咨询', emoji: '💡',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
       bg: 'linear-gradient(135deg,#e8f8e8,#bbf7d0)',
       desc: '为企业提供数字化转型规划、技术选型、系统架构设计等全方位技术咨询服务。',
       tags: ['数字化', '咨询服务', '技术规划'],
