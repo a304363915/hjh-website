@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品服务 - 上海泓锦浩机械科技有限公司</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚙</span>
+        <div class="logo-text"><strong>泓锦浩</strong><small>机械科技</small></div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="products.html" class="active">产品服务</a>
+        <a href="contact.html">联系我们</a>
+        <a href="admin/index.html" class="btn-nav">后台管理</a>
+      </nav>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">首页</a>
+      <a href="about.html">关于我们</a>
+      <a href="products.html">产品服务</a>
+      <a href="contact.html">联系我们</a>
+      <a href="admin/index.html">后台管理</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">首页</a>
+        <span class="sep">/</span>
+        <span>产品服务</span>
+      </div>
+      <h1>产品与服务</h1>
+      <p>覆盖贸易产品、相机标定、精密大理石三大核心领域，提供全方位解决方案</p>
+    </div>
+  </section>
+
+  <!-- 核心业务介绍 -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">三大核心业务</span>
+        <h2 class="section-title">我们专注于此</h2>
+      </div>
+      <div class="core-biz-grid">
+        <div class="core-biz-card" style="--accent:#e67e22;--accent-bg:#fff3e0">
+          <div class="core-biz-num">01</div>
+          <div class="core-biz-icon">📷</div>
+          <h3>相机标定</h3>
+          <p>专业相机标定板、标定靶及配套标定服务。产品采用高精度印刷工艺，角点提取精准，广泛应用于机器视觉、自动驾驶、3D测量、机器人手眼标定等前沿领域。</p>
+          <ul class="core-biz-list">
+            <li>✓ 棋盘格标定板</li>
+            <li>✓ ArUco / ChArUco 靶</li>
+            <li>✓ 圆点阵列标定板</li>
+            <li>✓ 定制化标定解决方案</li>
+          </ul>
+        </div>
+        <div class="core-biz-card" style="--accent:#1a6db5;--accent-bg:#e8f4fd">
+          <div class="core-biz-num">02</div>
+          <div class="core-biz-icon">🪨</div>
+          <h3>精密大理石</h3>
+          <p>高精度大理石平台及配套精密检测工具。采用优质天然大理石，热膨胀系数极低，平面精度高，广泛应用于精密测量、机床制造、半导体、光学等高端制造业。</p>
+          <ul class="core-biz-list">
+            <li>✓ 精密大理石平台</li>
+            <li>✓ 大理石检测靠铁</li>
+            <li>✓ 精密直角尺套件</li>
+            <li>✓ V型铁、方箱等工具</li>
+          </ul>
+        </div>
+        <div class="core-biz-card" style="--accent:#27ae60;--accent-bg:#e8f8e8">
+          <div class="core-biz-num">03</div>
+          <div class="core-biz-icon">🔧</div>
+          <h3>贸易产品</h3>
+          <p>机械设备、仪器仪表、电子元器件、金属制品等多品类贸易业务，覆盖国内外优质品牌，为企业提供一站式工业采购服务，快速响应，按需配置。</p>
+          <ul class="core-biz-list">
+            <li>✓ 机械设备及零部件</li>
+            <li>✓ 智能仪器仪表</li>
+            <li>✓ 电子元器件</li>
+            <li>✓ 通信设备及模具</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 产品列表 -->
+  <section class="products-page section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">产品目录</span>
+        <h2 class="section-title">全部产品</h2>
+        <p class="section-desc">点击分类快速筛选您需要的产品</p>
+      </div>
+      <div class="product-filters">
+        <button class="filter-btn active" onclick="filterProducts('all')">全部</button>
+        <button class="filter-btn" onclick="filterProducts('calibration')">相机标定</button>
+        <button class="filter-btn" onclick="filterProducts('marble')">精密大理石</button>
+        <button class="filter-btn" onclick="filterProducts('trade')">贸易产品</button>
+        <button class="filter-btn" onclick="filterProducts('service')">技术服务</button>
+      </div>
+      <div class="products-full-grid" id="fullProductsGrid">
+        <!-- 由 JS 动态渲染 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务流程 -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">服务流程</span>
+        <h2 class="section-title">我们如何为您服务</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h3>需求沟通</h3>
+          <p>与专业顾问深入沟通您的需求，明确技术参数和业务目标。</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h3>方案制定</h3>
+          <p>根据需求定制最优产品组合和技术解决方案，提供详细报价。</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h3>生产交付</h3>
+          <p>严格质量把控，按时交付产品，全程跟踪物流状态。</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h3>技术支持</h3>
+          <p>提供安装调试、技术培训及持续的售后技术支持服务。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>找不到合适的产品？</h2>
+      <p>告诉我们您的需求，我们为您定制专属解决方案</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-white">立即咨询</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light">
+          <span class="logo-icon">⚙</span>
+          <div class="logo-text"><strong>泓锦浩</strong><small>机械科技</small></div>
+        </a>
+        <p>专注精密机械领域，为您提供高品质的机械设备与技术服务解决方案。</p>
+      </div>
+      <div class="footer-links">
+        <h4>快速导航</h4>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="products.html">产品服务</a>
+        <a href="contact.html">联系我们</a>
+      </div>
+      <div class="footer-links">
+        <h4>产品服务</h4>
+        <a href="products.html">贸易产品</a>
+        <a href="products.html">相机标定</a>
+        <a href="products.html">精密大理石</a>
+        <a href="products.html">技术服务</a>
+      </div>
+      <div class="footer-contact">
+        <h4>联系方式</h4>
+        <p>📍 上海市</p>
+        <p>📞 请通过联系页面获取</p>
+        <p>✉ 请通过联系页面留言</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 上海泓锦浩机械科技有限公司 版权所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .core-biz-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .core-biz-card {
+      background: #fff; border-radius: var(--radius); padding: 2rem;
+      border: 1px solid var(--gray-200); box-shadow: var(--shadow);
+      position: relative; overflow: hidden; transition: var(--transition);
+    }
+    .core-biz-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .core-biz-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--accent);
+    }
+    .core-biz-num {
+      font-size: 3rem; font-weight: 800; color: var(--accent-bg);
+      position: absolute; top: 1rem; right: 1.5rem; line-height: 1;
+    }
+    .core-biz-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .core-biz-card h3 { font-size: 1.2rem; color: var(--gray-900); margin-bottom: .8rem; font-weight: 700; }
+    .core-biz-card p  { color: var(--gray-500); font-size: .9rem; line-height: 1.7; margin-bottom: 1.2rem; }
+    .core-biz-list { display: flex; flex-direction: column; gap: .4rem; }
+    .core-biz-list li { font-size: .85rem; color: var(--gray-700); }
+
+    .process-steps { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .process-step { flex: 1; min-width: 160px; text-align: center; padding: 1.5rem; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%; background: var(--blue);
+      color: #fff; font-size: 1.3rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .process-step h3 { font-size: 1rem; color: var(--gray-900); margin-bottom: .5rem; font-weight: 600; }
+    .process-step p  { color: var(--gray-500); font-size: .85rem; }
+    .process-arrow { color: var(--gray-200); font-size: 2rem; padding-top: 1.5rem; }
+
+    @media(max-width:768px){
+      .core-biz-grid { grid-template-columns: 1fr; }
+      .process-arrow { display: none; }
+      .process-steps { flex-direction: column; }
+    }
+  </style>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
