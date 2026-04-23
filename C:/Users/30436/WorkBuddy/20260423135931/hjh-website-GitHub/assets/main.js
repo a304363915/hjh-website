@@ -69,9 +69,10 @@ document.head.appendChild(style);
 const productsGrid = document.getElementById('productsGrid');
 if (productsGrid && window.SiteData) {
   SiteData.products.slice(0, 6).forEach((p, i) => {
+    const imgHtml = p.image ? `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.innerHTML='${p.emoji}'">` : p.emoji;
     productsGrid.innerHTML += `
       <div class="product-card" style="animation-delay:${i * 0.08}s">
-        <div class="product-img" style="background:${p.bg}">${p.emoji}</div>
+        <div class="product-img" style="background:${p.bg}">${imgHtml}</div>
         <div class="product-body">
           <div class="product-cat">${p.category}</div>
           <h3>${p.name}</h3>
@@ -136,8 +137,9 @@ function renderProductsGrid(list) {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.style.cssText = `opacity:0;transform:translateY(24px);transition:opacity .5s ease ${i * 0.06}s,transform .5s ease ${i * 0.06}s`;
+    const imgHtml = p.image ? `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.innerHTML='${p.emoji}'">` : p.emoji;
     card.innerHTML = `
-      <div class="product-img" style="background:${p.bg}">${p.emoji}</div>
+      <div class="product-img" style="background:${p.bg}">${imgHtml}</div>
       <div class="product-body">
         <div class="product-cat">${p.category}</div>
         <h3>${p.name}</h3>
