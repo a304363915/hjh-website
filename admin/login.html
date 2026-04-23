@@ -248,10 +248,10 @@
 <script>
 // ============================================================
 // 账号密码配置（部署到服务器后建议改为后端验证）
-// 默认账号: admin  密码: hjh@2026
+// 默认账号: admin  密码: 2026
 // ============================================================
 const ADMIN_USERS = [
-  { username: 'admin', password: 'hjh@2026', role: '超级管理员' }
+  { username: 'admin', password: '2026', role: '超级管理员' }
 ];
 
 const SESSION_KEY  = 'hjh_admin_token';
@@ -326,25 +326,23 @@ function handleLogin(e) {
       sessionStorage.setItem('hjh_admin_user', JSON.stringify({ username, role: user.role }));
 
       btn.innerHTML = '✓ 登录成功，跳转中...';
-      setTimeout(() => location.replace('index.html'), 600);
+      setTimeout(() => {
+        sessionStorage.setItem('hjh_login_ok', 'yes');
+        location.replace('index.html');
+      }, 600);
     } else {
-      // 登录失败
       failCount++;
-
       if (failCount >= MAX_FAIL) {
         lockedUntil = Date.now() + LOCK_SECONDS * 1000;
         startLockTimer();
       }
-
       btn.innerHTML = '登 录';
       btn.disabled  = false;
       errMsg.classList.add('show');
+      setTimeout(() => { errMsg.classList.remove('show'); }, 4000);
       document.getElementById('password').value = '';
       document.getElementById('password').focus();
-
-      // 抖动动画
       const card = document.querySelector('.login-card');
-      card.style.animation = 'none';
       card.style.transform = 'translateX(-8px)';
       setTimeout(() => { card.style.transform = 'translateX(8px)'; }, 80);
       setTimeout(() => { card.style.transform = 'translateX(-5px)'; }, 160);
