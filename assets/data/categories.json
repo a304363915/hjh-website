@@ -1,0 +1,52 @@
+[
+  {
+    "title_zh": "液压机械",
+    "title_en": "Hydraulic Machinery",
+    "slug": "hydraulic-machinery",
+    "image": "https://via.placeholder.com/400x300?text=Hydraulic",
+    "description_zh": "专业液压机械设备，广泛应用于金属加工、制造等领域。",
+    "description_en": "Professional hydraulic machinery equipment, widely used in metal processing, manufacturing and other fields.",
+    "weight": 0,
+    "published": true
+  },
+  {
+    "title_zh": "数控设备",
+    "title_en": "CNC Equipment",
+    "slug": "cnc-equipment",
+    "image": "https://via.placeholder.com/400x300?text=CNC",
+    "description_zh": "高精度数控设备，适用于精密零件加工。",
+    "description_en": "High-precision CNC equipment, suitable for precision parts processing.",
+    "weight": 1,
+    "published": true
+  },
+  {
+    "title_zh": "切割设备",
+    "title_en": "Cutting Equipment",
+    "slug": "cutting-equipment",
+    "image": "https://via.placeholder.com/400x300?text=Cutting",
+    "description_zh": "高效切割解决方案，适用于各种材料。",
+    "description_en": "Efficient cutting solutions for various materials.",
+    "weight": 2,
+    "published": true
+  },
+  {
+    "title_zh": "焊接设备",
+    "title_en": "Welding Equipment",
+    "slug": "welding-equipment",
+    "image": "https://via.placeholder.com/400x300?text=Welding",
+    "description_zh": "专业焊接设备，适用于各种焊接工艺。",
+    "description_en": "Professional welding equipment for various welding processes.",
+    "weight": 3,
+    "published": true
+  },
+  {
+    "title_zh": "精密仪器",
+    "title_en": "Precision Instruments",
+    "slug": "precision-instruments",
+    "image": "https://via.placeholder.com/400x300?text=Precision",
+    "description_zh": "精密测量和校准仪器，适用于半导体行业。",
+    "description_en": "Precision measurement and calibration instruments for semiconductor industry.",
+    "weight": 4,
+    "published": true
+  }
+]
