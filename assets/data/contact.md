@@ -1,7 +1,7 @@
 ---
-phone: "021-1234-5678"
-email: "info@hongjinhao.com"
-address: "上海市浦东新区张江高科技园区XXX路XX号"
+phone: "15200002671"
+email: "hujingchang@hongjinhao.com"
+address: "上海市宝山区逸仙路2816号1幢1层"
 ---
 
 # 联系信息
