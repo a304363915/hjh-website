@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 上海泓锦浩机械科技有限公司</title>
+    <meta name="description" content="了解上海泓锦浩机械科技有限公司的企业文化、发展历程和企业实力">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚙</span>
+                <div class="logo-text">
+                    <strong>泓锦浩</strong>
+                    <small>机械科技</small>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="about.html" class="active">关于我们</a>
+                <a href="products/index.html">产品中心</a>
+                <a href="news/index.html">新闻动态</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+            <!-- 语言切换 -->
+            <div style="margin-left: 16px;">
+                <button onclick="switchLang('zh')" class="lang-btn" id="btn-zh" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">中文</button>
+                <button onclick="switchLang('en')" class="lang-btn" id="btn-en" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">EN</button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">首页</a>
+            <a href="about.html">关于我们</a>
+            <a href="products/index.html">产品中心</a>
+            <a href="news/index.html">新闻动态</a>
+            <a href="contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">首页</a>
+                <span class="sep">/</span>
+                <span>关于我们</span>
+            </div>
+            <h1>关于我们</h1>
+            <p>About Us</p>
+        </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="about-story">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-placeholder">
+                    <div class="about-img-inner">
+                        <div class="big-icon">🏭</div>
+                        <p>上海泓锦浩机械科技有限公司</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>公司简介</h2>
+                    <p id="company-intro">加载中...</p>
+                    <p style="margin-top: 1rem;">我们致力于为客户提供最优质的机械设备和最专业的技术服务，不断推动行业技术进步。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业文化 -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">企业文化</span>
+                <h2 class="section-title">核心价值观</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>专业专注</h3>
+                    <p>专注于精密机械领域，不断提升专业技术水平</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>诚信为本</h3>
+                    <p>以诚信为基础，建立长期稳定的合作关系</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>持续创新</h3>
+                    <p>不断创新技术和管理，为客户创造更大价值</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⭐</div>
+                    <h3>追求卓越</h3>
+                    <p>追求卓越品质，超出客户期望</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">发展历程</span>
+                <h2 class="section-title">公司里程碑</h2>
+            </div>
+            <div class="timeline" id="company-history">
+                <!-- 由 JS 动态加载 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2014</div>
+                        <h3>公司成立</h3>
+                        <p>上海泓锦浩机械科技有限公司正式成立，专注于精密机械领域</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h3>业务扩展</h3>
+                        <p>扩展产品线，新增相机标定和精密大理石业务</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3>持续发展</h3>
+                        <p>持续为客户提供更优质的产品和服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-icon">⚙</span>
+                    <div class="logo-text">
+                        <strong>泓锦浩</strong>
+                        <small>机械科技</small>
+                    </div>
+                </a>
+                <p>专注精密机械领域，为您提供高品质的机械设备与技术服务解决方案。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="products/index.html">产品中心</a>
+                <a href="news/index.html">新闻动态</a>
+                <a href="contact.html">联系我们</a>
+            </div>
+            <div class="footer-links">
+                <h4>产品服务</h4>
+                <a href="products/trade.html">贸易产品</a>
+                <a href="products/calibration.html">相机标定</a>
+                <a href="products/marble.html">精密大理石</a>
+                <a href="products/technical.html">技术服务</a>
+                <a href="products/instruments.html">仪器仪表</a>
+                <a href="products/consulting.html">管理咨询</a>
+            </div>
+            <div class="footer-contact">
+                <h4>联系方式</h4>
+                <p id="footer-phone">📞 加载中...</p>
+                <p id="footer-email">✉ 加载中...</p>
+                <p id="footer-address">📍 加载中...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 上海泓锦浩机械科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // 加载页脚联系信息
+        loadContactInfo();
+        
+        // 加载关于我们内容
+        loadAboutContent();
+        
+        // 移动端菜单
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        });
+        
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
