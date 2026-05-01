@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻动态 - 上海泓锦浩机械科技有限公司</title>
+    <meta name="description" content="上海泓锦浩机械科技有限公司新闻动态">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">⚙</span>
+                <div class="logo-text">
+                    <strong>泓锦浩</strong>
+                    <small>机械科技</small>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于我们</a>
+                <a href="../products/index.html">产品中心</a>
+                <a href="index.html" class="active">新闻动态</a>
+                <a href="../contact.html">联系我们</a>
+            </nav>
+            <!-- 语言切换 -->
+            <div style="margin-left: 16px;">
+                <button onclick="switchLang('zh')" class="lang-btn" id="btn-zh" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">中文</button>
+                <button onclick="switchLang('en')" class="lang-btn" id="btn-en" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">EN</button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html">首页</a>
+            <a href="../about.html">关于我们</a>
+            <a href="../products/index.html">产品中心</a>
+            <a href="index.html">新闻动态</a>
+            <a href="../contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">首页</a>
+                <span class="sep">/</span>
+                <span>新闻动态</span>
+            </div>
+            <h1>新闻动态</h1>
+            <p>News</p>
+        </div>
+    </section>
+
+    <!-- 新闻列表 -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;" id="news-grid">
+                <!-- 新闻将通过 JavaScript 加载 -->
+                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.08); border: 1px solid #e2e8f0;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #e8f4fd, #dbeafe); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📰</div>
+                    <div style="padding: 1.5rem;">
+                        <div style="font-size: .85rem; color: #1a6db5; font-weight: 600; margin-bottom: .5rem;">2024-12-15</div>
+                        <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: .5rem; font-weight: 600;">新闻标题加载中...</h3>
+                        <p style="font-size: .9rem; color: #64748b; line-height: 1.6;">新闻摘要加载中...</p>
+                    </div>
+                </div>
+                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.08); border: 1px solid #e2e8f0;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #e8f4fd, #dbeafe); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📰</div>
+                    <div style="padding: 1.5rem;">
+                        <div style="font-size: .85rem; color: #1a6db5; font-weight: 600; margin-bottom: .5rem;">2024-12-10</div>
+                        <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: .5rem; font-weight: 600;">新闻标题加载中...</h3>
+                        <p style="font-size: .9rem; color: #64748b; line-height: 1.6;">新闻摘要加载中...</p>
+                    </div>
+                </div>
+                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.08); border: 1px solid #e2e8f0;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #e8f4fd, #dbeafe); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📰</div>
+                    <div style="padding: 1.5rem;">
+                        <div style="font-size: .85rem; color: #1a6db5; font-weight: 600; margin-bottom: .5rem;">2024-12-05</div>
+                        <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: .5rem; font-weight: 600;">新闻标题加载中...</h3>
+                        <p style="font-size: .9rem; color: #64748b; line-height: 1.6;">新闻摘要加载中...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo logo-light">
+                    <span class="logo-icon">⚙</span>
+                    <div class="logo-text">
+                        <strong>泓锦浩</strong>
+                        <small>机械科技</small>
+                    </div>
+                </a>
+                <p>专注精密机械领域，为您提供高品质的机械设备与技术服务解决方案。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于我们</a>
+                <a href="../products/index.html">产品中心</a>
+                <a href="index.html">新闻动态</a>
+                <a href="../contact.html">联系我们</a>
+            </div>
+            <div class="footer-links">
+                <h4>产品服务</h4>
+                <a href="../products/trade.html">贸易产品</a>
+                <a href="../products/calibration.html">相机标定</a>
+                <a href="../products/marble.html">精密大理石</a>
+                <a href="../products/technical.html">技术服务</a>
+                <a href="../products/instruments.html">仪器仪表</a>
+                <a href="../products/consulting.html">管理咨询</a>
+            </div>
+            <div class="footer-contact">
+                <h4>联系方式</h4>
+                <p id="footer-phone">📞 加载中...</p>
+                <p id="footer-email">✉ 加载中...</p>
+                <p id="footer-address">📍 加载中...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 上海泓锦浩机械科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // 加载页脚联系信息
+        loadContactInfo();
+        
+        // 加载新闻
+        loadNews();
+        
+        function loadNews() {
+            // 默认新闻数据
+            const defaultNews = [
+                {
+                    title_zh: '公司荣获"高新技术企业"认证',
+                    title_en: 'Company Awarded "High-Tech Enterprise" Certification',
+                    date: '2024-12-15',
+                    summary_zh: '经过严格评审，上海泓锦浩机械科技有限公司正式获得高新技术企业认证，标志着公司在技术创新方面取得重要突破。',
+                    image: ''
+                },
+                {
+                    title_zh: '新产品发布会圆满成功',
+                    title_en: 'New Product Launch Event Successfully Held',
+                    date: '2024-12-10',
+                    summary_zh: '公司成功举办新产品发布会，展示了最新研发的精密大理石平台和相机标定板，获得客户高度评价。',
+                    image: ''
+                },
+                {
+                    title_zh: '参加2024国际机械制造展览会',
+                    title_en: 'Participated in 2024 International Machinery Manufacturing Exhibition',
+                    date: '2024-12-05',
+                    summary_zh: '公司参加2024国际机械制造展览会，与多家国际企业达成合作意向，进一步拓展海外市场。',
+                    image: ''
+                }
+            ];
+            
+            const grid = document.getElementById('news-grid');
+            if (!grid) return;
+            
+            grid.innerHTML = '';
+            
+            defaultNews.forEach(news => {
+                const card = document.createElement('div');
+                card.style = 'background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.08); border: 1px solid #e2e8f0; transition: transform .3s, box-shadow .3s;';
+                card.onmouseenter = () => {
+                    card.style.transform = 'translateY(-6px)';
+                    card.style.boxShadow = '0 8px 40px rgba(0,0,0,.14)';
+                };
+                card.onmouseleave = () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 24px rgba(0,0,0,.08)';
+                };
+                
+                const title = currentLang === 'zh' ? news.title_zh : news.title_en;
+                const summary = news.summary_zh || '';
+                
+                card.innerHTML = `
+                    <div style="height: 200px; background: linear-gradient(135deg, #e8f4fd, #dbeafe); display: flex; align-items: center; justify-content: center; font-size: 3rem;">📰</div>
+                    <div style="padding: 1.5rem;">
+                        <div style="font-size: .85rem; color: #1a6db5; font-weight: 600; margin-bottom: .5rem;">${news.date}</div>
+                        <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: .5rem; font-weight: 600;">${title}</h3>
+                        <p style="font-size: .9rem; color: #64748b; line-height: 1.6;">${summary}</p>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+        
+        // 移动端菜单
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        });
+        
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
