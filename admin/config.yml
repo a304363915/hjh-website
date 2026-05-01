@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "products"
+    label: "产品管理"
+    files:
+      - file: "assets/data/products.json"
+        name: "products"
+        label: "产品列表"
+        fields:
+          - {label: "产品", name: "products", widget: "list", fields:
+              - {label: "中文标题", name: "title_zh", widget: "string"}
+              - {label: "英文标题", name: "title_en", widget: "string"}
+              - {label: "型号", name: "model", widget: "string"}
+              - {label: "分类", name: "category", widget: "string"}
+              - {label: "标识符", name: "slug", widget: "string"}
+              - {label: "中文简介", name: "summary_zh", widget: "text"}
+              - {label: "英文简介", name: "summary_en", widget: "text"}
+              - {label: "中文描述", name: "description_zh", widget: "markdown"}
+              - {label: "英文描述", name: "description_en", widget: "markdown"}
+              - {label: "是否推荐", name: "featured", widget: "boolean", default: false}
+              - {label: "是否发布", name: "published", widget: "boolean", default: true}
+              - {label: "排序权重", name: "weight", widget: "number", default: 0}
+              - {label: "图片", name: "images", widget: "list", fields:
+                  - {label: "图片", name: "image", widget: "image"}
+                  - {label: "说明", name: "caption", widget: "string"}}
+
+  - name: "pages"
+    label: "页面内容"
+    files:
+      - file: "assets/data/homepage.md"
+        name: "homepage"
+        label: "首页内容"
+        fields:
+          - {label: "Banner标题（中文）", name: "banner_title", widget: "string"}
+          - {label: "Banner标题（英文）", name: "banner_title_en", widget: "string"}
+          - {label: "Banner副标题（中文）", name: "banner_subtitle", widget: "text"}
+          - {label: "Banner副标题（英文）", name: "banner_subtitle_en", widget: "text"}
+
+      - file: "assets/data/contact.md"
+        name: "contact"
+        label: "联系信息"
+        fields:
+          - {label: "电话", name: "phone", widget: "string"}
+          - {label: "邮箱", name: "email", widget: "string"}
+          - {label: "地址", name: "address", widget: "text"}
