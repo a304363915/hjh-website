@@ -11,8 +11,21 @@
     </style>
 </head>
 <body>
+    <script>
+      // Force Decap CMS to use GitHub OAuth directly (not Netlify Identity)
+      window.CMS_ENV = {
+        backend: {
+          name: 'github',
+          repo: 'a304363915/hjh-website',
+          branch: 'main',
+          client_id: 'Ov23lib1aZIfd29hoS2Q'
+        },
+        media_folder: "assets/images/uploads",
+        public_folder: "/assets/images/uploads"
+      };
+    </script>
     <div id="nc-root"></div>
-    <!-- Decap CMS 会自动在这里渲染 -->
+    <!-- Decap CMS will use window.CMS_ENV configuration -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
