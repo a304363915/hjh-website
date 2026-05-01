@@ -1,9 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: a304363915/hjh-website
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
