@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - 上海泓锦浩机械科技有限公司</title>
+    <meta name="description" content="查看产品详细信息">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">⚙</span>
+                <div class="logo-text">
+                    <strong>泓锦浩</strong>
+                    <small>机械科技</small>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于我们</a>
+                <a href="index.html">产品中心</a>
+                <a href="../news/index.html">新闻动态</a>
+                <a href="../contact.html">联系我们</a>
+            </nav>
+            <!-- 语言切换 -->
+            <div style="margin-left: 16px;">
+                <button onclick="switchLang('zh')" class="lang-btn" id="btn-zh" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">中文</button>
+                <button onclick="switchLang('en')" class="lang-btn" id="btn-en" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">EN</button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html">首页</a>
+            <a href="../about.html">关于我们</a>
+            <a href="index.html">产品中心</a>
+            <a href="../news/index.html">新闻动态</a>
+            <a href="../contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">首页</a>
+                <span class="sep">/</span>
+                <a href="index.html" id="breadcrumb-category">产品中心</a>
+                <span class="sep">/</span>
+                <span id="breadcrumb-product">产品详情</span>
+            </div>
+            <h1 id="product-title">产品详情</h1>
+            <p id="product-model">型号：加载中...</p>
+        </div>
+    </section>
+
+    <!-- 产品详情 -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                <!-- 产品图片 -->
+                <div>
+                    <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.08); margin-bottom: 1rem;">
+                        <img id="main-image" src="" alt="产品图片" style="width: 100%; height: 400px; object-fit: contain; padding: 1rem;">
+                    </div>
+                </div>
+
+                <!-- 产品信息 -->
+                <div>
+                    <div style="background: #e8f4fd; border-left: 4px solid #1a6db5; padding: 1rem; margin-bottom: 1.5rem; border-radius: 0 8px 8px 0;">
+                        <p style="color: #334155; line-height: 1.7;" id="product-summary">加载中...</p>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h3 style="font-size: 1.1rem; color: #0f172a; font-weight: 600; margin-bottom: 1rem;">技术参数</h3>
+                        <table style="width: 100%; border-collapse: collapse;" id="specs-table">
+                            <tbody>
+                                <!-- 技术参数将通过 JavaScript 加载 -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="../contact.html" class="btn btn-primary">咨询这款产品</a>
+                        <a href="index.html" class="btn btn-outline">返回列表</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品详细描述 -->
+            <div style="background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,.08); border: 1px solid #e2e8f0;">
+                <h2 style="font-size: 1.5rem; color: #0f172a; font-weight: 700; margin-bottom: 1.5rem;">产品详情</h2>
+                <div id="product-description">
+                    <p style="color: #334155; line-height: 1.7;">这里是产品的详细描述，包括产品特点、应用场景、技术优势等。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo logo-light">
+                    <span class="logo-icon">⚙</span>
+                    <div class="logo-text">
+                        <strong>泓锦浩</strong>
+                        <small>机械科技</small>
+                    </div>
+                </a>
+                <p>专注精密机械领域，为您提供高品质的机械设备与技术服务解决方案。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于我们</a>
+                <a href="index.html">产品中心</a>
+                <a href="../news/index.html">新闻动态</a>
+                <a href="../contact.html">联系我们</a>
+            </div>
+            <div class="footer-links">
+                <h4>产品服务</h4>
+                <a href="trade.html">贸易产品</a>
+                <a href="calibration.html">相机标定</a>
+                <a href="marble.html">精密大理石</a>
+                <a href="technical.html">技术服务</a>
+                <a href="instruments.html">仪器仪表</a>
+                <a href="consulting.html">管理咨询</a>
+            </div>
+            <div class="footer-contact">
+                <h4>联系方式</h4>
+                <p id="footer-phone">📞 加载中...</p>
+                <p id="footer-email">✉ 加载中...</p>
+                <p id="footer-address">📍 加载中...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 上海泓锦浩机械科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // 加载页脚联系信息
+        if (typeof loadContactInfo === 'function') {
+            loadContactInfo();
+        }
+        
+        // 从 URL 获取产品 ID
+        function getProductId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+        
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            const productSlug = getProductId();
+            if (productSlug) {
+                if (typeof loadProductDetail === 'function') {
+                    loadProductDetail(productSlug);
+                }
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+        
+        // 移动端菜单
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        });
+        
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
