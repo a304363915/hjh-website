@@ -4,8 +4,6 @@ backend:
   branch: main
   client_id: Ov23lib1aZIfd29hoS2Q
 
-local_backend: true
-
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
