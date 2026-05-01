@@ -15,7 +15,10 @@ collections:
         name: "products"
         label: "产品列表"
         fields:
-          - {label: "产品", name: "products", widget: "list", fields:
+          - label: "产品"
+            name: "products"
+            widget: "list"
+            fields:
               - {label: "中文标题", name: "title_zh", widget: "string"}
               - {label: "英文标题", name: "title_en", widget: "string"}
               - {label: "型号", name: "model", widget: "string"}
@@ -28,9 +31,12 @@ collections:
               - {label: "是否推荐", name: "featured", widget: "boolean", default: false}
               - {label: "是否发布", name: "published", widget: "boolean", default: true}
               - {label: "排序权重", name: "weight", widget: "number", default: 0}
-              - {label: "图片", name: "images", widget: "list", fields:
+              - label: "图片"
+                name: "images"
+                widget: "list"
+                fields:
                   - {label: "图片", name: "image", widget: "image"}
-                  - {label: "说明", name: "caption", widget: "string"}}
+                  - {label: "说明", name: "caption", widget: "string"}
 
   - name: "pages"
     label: "页面内容"
