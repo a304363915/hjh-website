@@ -1,8 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
   repo: a304363915/hjh-website
   branch: main
-  client_id: Ov23lib1aZIfd29hoS2Q
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
