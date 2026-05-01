@@ -1,0 +1,157 @@
+[
+  {
+    "title_zh": "液压冲床 HC-100",
+    "title_en": "Hydraulic Press HC-100",
+    "model": "HC-100",
+    "category": "hydraulic-machinery",
+    "slug": "hc-100",
+    "images": [
+      {
+        "image": "https://via.placeholder.com/400x300?text=HC-100",
+        "caption": "HC-100 液压冲床"
+      }
+    ],
+    "summary_zh": "高效液压冲床，适用于各种金属加工场景，压力可达100吨。",
+    "summary_en": "Efficient hydraulic press suitable for various metal processing scenarios, pressure up to 100 tons.",
+    "description_zh": "## 产品介绍\n\nHC-100 液压冲床采用先进的液压系统，具有压力大、精度高、操作简便等特点。\n\n## 应用领域\n\n- 金属冲压\n- 零件成型\n- 模具压制",
+    "description_en": "## Product Introduction\n\nHC-100 Hydraulic Press adopts advanced hydraulic system with features of high pressure, high precision and easy operation.",
+    "specs": [
+      {"name_zh": "额定压力", "name_en": "Rated Pressure", "value": "100吨"},
+      {"name_zh": "电机功率", "name_en": "Motor Power", "value": "15kW"},
+      {"name_zh": "工作台尺寸", "name_en": "Table Size", "value": "800x600mm"},
+      {"name_zh": "行程", "name_en": "Stroke", "value": "300mm"}
+    ],
+    "applications": [
+      {"application": "汽车制造"},
+      {"application": "航空航天"},
+      {"application": "电子制造"}
+    ],
+    "weight": 0,
+    "published": true,
+    "featured": true
+  },
+  {
+    "title_zh": "数控车床 CL-200",
+    "title_en": "CNC Lathe CL-200",
+    "model": "CL-200",
+    "category": "cnc-equipment",
+    "slug": "cl-200",
+    "images": [
+      {
+        "image": "https://via.placeholder.com/400x300?text=CL-200",
+        "caption": "CL-200 数控车床"
+      }
+    ],
+    "summary_zh": "高精度数控车床，加工直径200mm，适用于精密零件加工。",
+    "summary_en": "High-precision CNC lathe with machining diameter of 200mm, suitable for precision parts processing.",
+    "description_zh": "## 产品介绍\n\nCL-200 数控车床采用先进的数控系统，具有高精度、高效率、操作简便等特点。\n\n## 技术特点\n\n- 高精度主轴\n- 自动换刀系统\n- 全封闭防护",
+    "description_en": "## Product Introduction\n\nCL-200 CNC Lathe adopts advanced CNC system with features of high precision, high efficiency and easy operation.",
+    "specs": [
+      {"name_zh": "加工直径", "name_en": "Machining Diameter", "value": "200mm"},
+      {"name_zh": "主轴转速", "name_en": "Spindle Speed", "value": "3000rpm"},
+      {"name_zh": "电机功率", "name_en": "Motor Power", "value": "7.5kW"},
+      {"name_zh": "重量", "name_en": "Weight", "value": "1500kg"}
+    ],
+    "applications": [
+      {"application": "精密制造"},
+      {"application": "汽车零部件"},
+      {"application": "模具加工"}
+    ],
+    "weight": 1,
+    "published": true,
+    "featured": true
+  },
+  {
+    "title_zh": "激光切割机 LC-300",
+    "title_en": "Laser Cutting Machine LC-300",
+    "model": "LC-300",
+    "category": "cutting-equipment",
+    "slug": "lc-300",
+    "images": [
+      {
+        "image": "https://via.placeholder.com/400x300?text=LC-300",
+        "caption": "LC-300 激光切割机"
+      }
+    ],
+    "summary_zh": "高精度激光切割机，切割厚度可达20mm，适用于各种金属材料。",
+    "summary_en": "High-precision laser cutting machine, cutting thickness up to 20mm, suitable for various metal materials.",
+    "description_zh": "## 产品介绍\n\nLC-300 激光切割机采用先进的光纤激光技术，具有切割精度高、速度快、效果好等特点。",
+    "description_en": "## Product Introduction\n\nLC-300 Laser Cutting Machine adopts advanced fiber laser technology with features of high cutting precision, fast speed and good effect.",
+    "specs": [
+      {"name_zh": "激光功率", "name_en": "Laser Power", "value": "3000W"},
+      {"name_zh": "切割厚度", "name_en": "Cutting Thickness", "value": "20mm"},
+      {"name_zh": "切割速度", "name_en": "Cutting Speed", "value": "0-20m/min"},
+      {"name_zh": "工作区域", "name_en": "Working Area", "value": "1500x3000mm"}
+    ],
+    "applications": [
+      {"application": "钣金加工"},
+      {"application": "机箱机柜"},
+      {"application": "五金制品"}
+    ],
+    "weight": 2,
+    "published": true,
+    "featured": false
+  },
+  {
+    "title_zh": "标定板 BP-100",
+    "title_en": "Calibration Plate BP-100",
+    "model": "BP-100",
+    "category": "precision-instruments",
+    "slug": "bp-100",
+    "images": [
+      {
+        "image": "https://via.placeholder.com/400x300?text=BP-100",
+        "caption": "BP-100 标定板"
+      }
+    ],
+    "summary_zh": "高精度标定板，适用于半导体检测和精密测量。",
+    "summary_en": "High-precision calibration plate, suitable for semiconductor inspection and precision measurement.",
+    "description_zh": "## 产品介绍\n\nBP-100 标定板采用高精度加工工艺，表面平整度达到纳米级，广泛应用于半导体行业的精密测量和校准。\n\n## 技术特点\n\n- 高精度表面处理\n- 耐腐蚀材料\n- 长期使用不变形",
+    "description_en": "## Product Introduction\n\nBP-100 Calibration Plate adopts high-precision processing technology with nano-level surface flatness, widely used in precision measurement and calibration in semiconductor industry.",
+    "specs": [
+      {"name_zh": "尺寸精度", "name_en": "Dimensional Accuracy", "value": "±0.001mm"},
+      {"name_zh": "表面平整度", "name_en": "Surface Flatness", "value": "≤0.1μm"},
+      {"name_zh": "材料", "name_en": "Material", "value": "花岗岩/大理石"},
+      {"name_zh": "厚度", "name_en": "Thickness", "value": "50mm"}
+    ],
+    "applications": [
+      {"application": "半导体检测"},
+      {"application": "精密测量"},
+      {"application": "设备校准"}
+    ],
+    "weight": 3,
+    "published": true,
+    "featured": true
+  },
+  {
+    "title_zh": "精密大理石平台 PM-200",
+    "title_en": "Precision Marble Platform PM-200",
+    "model": "PM-200",
+    "category": "precision-instruments",
+    "slug": "pm-200",
+    "images": [
+      {
+        "image": "https://via.placeholder.com/400x300?text=PM-200",
+        "caption": "PM-200 精密大理石平台"
+      }
+    ],
+    "summary_zh": "精密大理石测量平台，适用于半导体设备的基础支撑和精密测量。",
+    "summary_en": "Precision marble measuring platform, suitable for foundation support and precision measurement of semiconductor equipment.",
+    "description_zh": "## 产品介绍\n\nPM-200 精密大理石平台选用优质花岗岩材料，经过精密加工和人工研磨，具有稳定性好、精度高、耐腐蚀等特点。广泛应用于半导体、精密仪器等行业。\n\n## 技术特点\n\n- 优质花岗岩材料\n- 人工精密研磨\n- 抗振动性能好\n- 温度变形小",
+    "description_en": "## Product Introduction\n\nPM-200 Precision Marble Platform selects high-quality granite material, processed by precision machining and manual grinding, with features of good stability, high precision and corrosion resistance.",
+    "specs": [
+      {"name_zh": "平面度", "name_en": "Flatness", "value": "≤0.003mm/m"},
+      {"name_zh": "表面粗糙度", "name_en": "Surface Roughness", "value": "Ra≤0.1μm"},
+      {"name_zh": "硬度", "name_en": "Hardness", "value": "Hs≥70"},
+      {"name_zh": "承重", "name_en": "Load Capacity", "value": "3000kg/m²"}
+    ],
+    "applications": [
+      {"application": "半导体设备"},
+      {"application": "精密测量"},
+      {"application": "光学检测"}
+    ],
+    "weight": 4,
+    "published": true,
+    "featured": true
+  }
+]
