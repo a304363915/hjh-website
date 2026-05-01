@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - 上海泓锦浩机械科技有限公司</title>
+    <meta name="description" content="查看产品详细信息">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold text-primary">泓锦浩机械</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="nav-link text-gray-700 hover:text-primary font-medium">首页</a>
+                    <a href="../about.html" class="nav-link text-gray-700 hover:text-primary font-medium">关于我们</a>
+                    <a href="../products/index.html" class="nav-link text-primary font-medium">产品中心</a>
+                    <a href="../news/index.html" class="nav-link text-gray-700 hover:text-primary font-medium">新闻动态</a>
+                    <a href="../contact.html" class="nav-link text-gray-700 hover:text-primary font-medium">联系我们</a>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="switchLang('zh')" class="lang-btn px-3 py-1 rounded text-sm" id="btn-zh">中文</button>
+                    <button onclick="switchLang('en')" class="lang-btn px-3 py-1 rounded text-sm" id="btn-en">EN</button>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="container mx-auto px-4 py-4 space-y-2">
+                <a href="../index.html" class="block py-2 text-gray-700">首页</a>
+                <a href="../about.html" class="block py-2 text-gray-700">关于我们</a>
+                <a href="../products/index.html" class="block py-2 text-gray-700">产品中心</a>
+                <a href="../news/index.html" class="block py-2 text-gray-700">新闻动态</a>
+                <a href="../contact.html" class="block py-2 text-gray-700">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 产品详情 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <!-- 面包屑导航 -->
+            <div class="mb-8 text-sm text-gray-500">
+                <a href="../index.html" class="hover:text-primary">首页</a> &gt; 
+                <a href="../products/index.html" class="hover:text-primary">产品中心</a> &gt; 
+                <span id="breadcrumb-category">分类</span> &gt; 
+                <span id="breadcrumb-product">产品详情</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 产品图片 -->
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-4">
+                        <img id="main-image" src="" alt="产品图片" class="w-full h-96 object-contain p-4">
+                    </div>
+                    <div class="grid grid-cols-4 gap-2" id="thumbnail-gallery">
+                        <!-- 缩略图将通过 JavaScript 加载 -->
+                    </div>
+                </div>
+
+                <!-- 产品信息 -->
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2" id="product-title">加载中...</h1>
+                    <p class="text-gray-500 mb-4" id="product-model">型号：加载中...</p>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 mb-6">
+                        <p class="text-gray-700" id="product-summary">加载中...</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold mb-3">技术参数</h3>
+                        <table class="w-full border-collapse" id="specs-table">
+                            <tbody>
+                                <tr><td colspan="2" class="text-center py-4 text-gray-400">加载中...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="../contact.html" class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition">咨询这款产品</a>
+                        <a href="../products/index.html" class="border border-primary text-primary hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition">返回列表</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品详细描述 -->
+            <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">产品详情</h2>
+                <div class="prose max-w-none" id="product-description">
+                    <p>加载中...</p>
+                </div>
+            </div>
+
+            <!-- 应用领域 -->
+            <div class="mt-8 bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">应用领域</h2>
+                <div class="flex flex-wrap gap-2" id="applications-list">
+                    <span class="loading-placeholder bg-gray-200 px-4 py-2 rounded">加载中...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">泓锦浩机械</h4>
+                    <p class="text-gray-400">专业工业机械设备供应商</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../about.html" class="text-gray-400 hover:text-white">关于我们</a></li>
+                        <li><a href="../products/index.html" class="text-gray-400 hover:text-white">产品中心</a></li>
+                        <li><a href="../news/index.html" class="text-gray-400 hover:text-white">新闻动态</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系方式</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>电话：<span id="footer-phone">加载中...</span></li>
+                        <li>邮箱：<span id="footer-email">加载中...</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 上海泓锦浩机械科技有限公司. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // 从 URL 获取产品 ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const productSlug = urlParams.get('id');
+        
+        if (productSlug) {
+            loadProductDetail(productSlug);
+        } else {
+            window.location.href = '../products/index.html';
+        }
+        
+        loadContactInfo();
+    </script>
+</body>
+</html>
