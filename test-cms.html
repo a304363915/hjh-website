@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decap CMS 配置测试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1 { color: #333; }
+        h2 { color: #555; font-size: 1.2rem; margin-top: 20px; }
+        .status { 
+            padding: 10px; 
+            border-radius: 4px; 
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .status.warning { background: #fff3cd; color: #856404; }
+        button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 5px;
+        }
+        button:hover { background: #005a87; }
+        .file-list { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            border-radius: 4px; 
+            margin-top: 10px;
+        }
+        .file-list li { margin: 5px 0; }
+        .check { color: #28a745; }
+        .cross { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Decap CMS 配置测试</h1>
+    
+    <div class="test-card">
+        <h2>1. 检查必要文件</h2>
+        <div id="file-check"></div>
+    </div>
+
+    <div class="test-card">
+        <h2>2. 检查配置文件</h2>
+        <div id="config-check"></div>
+    </div>
+
+    <div class="test-card">
+        <h2>3. 访问后台管理</h2>
+        <p>如果以上检查都通过，点击下面的按钮访问后台：</p>
+        <button onclick="window.location.href='admin/'">进入后台 →</button>
+        <button onclick="testAPI()">测试本地API</button>
+    </div>
+
+    <div class="test-card">
+        <h2>4. 测试说明</h2>
+        <ul>
+            <li>✅ <strong>本地模式</strong>：配置了 <code>local_backend: true</code>，无需Netlify账号即可测试</li>
+            <li>📝 <strong>产品管理</strong>：编辑 <code>assets/data/products.json</code></li>
+            <li>📄 <strong>页面内容</strong>：编辑 <code>assets/data/homepage.md</code> 和 <code>contact.md</code></li>
+            <li>🖼️ <strong>图片上传</strong>：上传到 <code>assets/images/uploads/</code></li>
+        </ul>
+    </div>
+
+    <script>
+        // 检查必要文件是否存在
+        async function checkFiles() {
+            const files = [
+                { path: 'admin/index.html', name: 'admin/index.html' },
+                { path: 'admin/config.yml', name: 'admin/config.yml' },
+                { path: 'admin/decap-cms.js', name: 'admin/decap-cms.js' },
+                { path: 'assets/data/products.json', name: 'assets/data/products.json' },
+                { path: 'assets/data/homepage.md', name: 'assets/data/homepage.md' },
+                { path: 'assets/data/contact.md', name: 'assets/data/contact.md' }
+            ];
+
+            const results = document.getElementById('file-check');
+            results.innerHTML = '';
+
+            for (const file of files) {
+                try {
+                    const response = await fetch(file.path);
+                    if (response.ok) {
+                        results.innerHTML += `<div class="status success">✅ ${file.name} - 存在</div>`;
+                    } else {
+                        results.innerHTML += `<div class="status error">❌ ${file.name} - 不存在 (${response.status})</div>`;
+                    }
+                } catch (error) {
+                    results.innerHTML += `<div class="status error">❌ ${file.name} - 无法访问 (${error.message})</div>`;
+                }
+            }
+        }
+
+        // 检查配置文件内容
+        async function checkConfig() {
+            const results = document.getElementById('config-check');
+            results.innerHTML = '';
+
+            try {
+                const response = await fetch('admin/config.yml');
+                const text = await response.text();
+
+                // 检查关键配置
+                const checks = [
+                    { key: 'local_backend: true', desc: '本地后端模式' },
+                    { key: 'assets/data/products.json', desc: '产品文件路径' },
+                    { key: 'assets/data/homepage.md', desc: '首页内容路径' },
+                    { key: 'assets/data/contact.md', desc: '联系信息路径' }
+                ];
+
+                checks.forEach(check => {
+                    if (text.includes(check.key)) {
+                        results.innerHTML += `<div class="status success">✅ ${check.desc} - 配置正确</div>`;
+                    } else {
+                        results.innerHTML += `<div class="status warning">⚠️ ${check.desc} - 未找到配置 "${check.key}"</div>`;
+                    }
+                });
+
+            } catch (error) {
+                results.innerHTML = `<div class="status error">❌ 无法读取配置文件: ${error.message}</div>`;
+            }
+        }
+
+        // 测试本地API（Decap CMS 本地后端）
+        async function testAPI() {
+            try {
+                const response = await fetch('.netlify/identity/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: 'test@test.com', password: 'test' })
+                });
+                alert('API响应: ' + response.status);
+            } catch (error) {
+                alert('API测试失败（这是正常的，因为本地模式不需要真实API）\n\n错误: ' + error.message);
+            }
+        }
+
+        // 页面加载时自动检查
+        window.addEventListener('load', function() {
+            checkFiles();
+            checkConfig();
+        });
+    </script>
+</body>
+</html>
