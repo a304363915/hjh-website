@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术服务 - 上海泓锦浩机械科技有限公司</title>
+    <meta name="description" content="上海泓锦浩机械科技有限公司提供专业的技术服务，包括技术咨询、方案设计、安装调试等">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">⚙</span>
+                <div class="logo-text">
+                    <strong>泓锦浩</strong>
+                    <small>机械科技</small>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于我们</a>
+                <a href="index.html" class="active">产品中心</a>
+                <a href="../news/index.html">新闻动态</a>
+                <a href="../contact.html">联系我们</a>
+            </nav>
+            <div style="margin-left: 16px;">
+                <button onclick="switchLang('zh')" class="lang-btn" id="btn-zh" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">中文</button>
+                <button onclick="switchLang('en')" class="lang-btn" id="btn-en" style="padding: 6px 12px; border-radius: 6px; font-size: .85rem; border: 1px solid #e2e8f0; background: #fff; cursor: pointer;">EN</button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../index.html">首页</a>
+            <a href="../about.html">关于我们</a>
+            <a href="index.html">产品中心</a>
+            <a href="../news/index.html">新闻动态</a>
+            <a href="../contact.html">联系我们</a>
+        </div>
+    </header>
+
+    <!-- 服务详情英雄区 - 蓝色主题 -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">首页</a>
+                <span class="sep">/</span>
+                <a href="index.html">产品中心</a>
+                <span class="sep">/</span>
+                <span>技术服务</span>
+            </div>
+            <h1>技术服务</h1>
+            <p>Technical Services - 全方位技术解决方案</p>
+        </div>
+    </section>
+
+    <!-- 服务介绍 -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 4rem;">
+                <div>
+                    <h2 style="font-size: 2rem; color: var(--gray-900); margin-bottom: 1.5rem; font-weight: 700;">专业的技术服务</h2>
+                    <p style="color: var(--gray-500); line-height: 1.9; margin-bottom: 1.5rem; font-size: 1.05rem;">我们提供全面的技术服务，包括技术咨询、方案设计、安装调试、技术培训等全方位服务。</p>
+                    <p style="color: var(--gray-500); line-height: 1.9; margin-bottom: 1.5rem; font-size: 1.05rem;">我们的技术团队拥有丰富的行业经验，能够深入理解客户需求，提供最适合的技术解决方案。</p>
+                    <p style="color: var(--gray-500); line-height: 1.9; margin-bottom: 1.5rem; font-size: 1.05rem;">从项目规划到实施交付，我们全程跟踪服务，确保项目顺利完成并达到预期效果。</p>
+                </div>
+                <div style="background: var(--gray-50); padding: 2.5rem; border-radius: var(--radius); border: 1px solid var(--gray-200);">
+                    <h3 style="font-size: 1.3rem; color: var(--gray-900); margin-bottom: 1.5rem; font-weight: 600;">服务优势</h3>
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--gray-200);">
+                        <div style="font-size: 1.8rem; margin-right: 1rem; min-width: 40px;">👥</div>
+                        <div>
+                            <h4 style="font-size: 1.05rem; color: var(--gray-900); margin-bottom: 0.3rem; font-weight: 600;">专业团队</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-500); line-height: 1.6;">经验丰富的技术团队，深厚的行业背景</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--gray-200);">
+                        <div style="font-size: 1.8rem; margin-right: 1rem; min-width: 40px;">💡</div>
+                        <div>
+                            <h4 style="font-size: 1.05rem; color: var(--gray-900); margin-bottom: 0.3rem; font-weight: 600;">定制方案</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-500); line-height: 1.6;">根据客户需求提供个性化的技术解决方案</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--gray-200);">
+                        <div style="font-size: 1.8rem; margin-right: 1rem; min-width: 40px;">🎯</div>
+                        <div>
+                            <h4 style="font-size: 1.05rem; color: var(--gray-900); margin-bottom: 0.3rem; font-weight: 600;">全程跟踪</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-500); line-height: 1.6;">从规划到交付全程跟踪，确保项目质量</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 1.2rem;">
+                        <div style="font-size: 1.8rem; margin-right: 1rem; min-width: 40px;">📚</div>
+                        <div>
+                            <h4 style="font-size: 1.05rem; color: var(--gray-900); margin-bottom: 0.3rem; font-weight: 600;">技术培训</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-500); line-height: 1.6;">提供全面的技术培训，确保客户能熟练使用</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 服务类型 -->
+            <div style="margin-top: 4rem;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <span style="display: inline-block; padding: 0.4rem 1.2rem; border-radius: 2rem; background: #e8f4fd; color: #3498db; font-size: 0.85rem; font-weight: 500; margin-bottom: 1rem;">服务项目</span>
+                    <h2 style="font-size: 2.2rem; color: var(--gray-900); font-weight: 700; margin-bottom: 1rem;">主要技术服务</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                    <div style="background: #fff; border-radius: var(--radius); padding: 2.5rem; border: 1px solid var(--gray-200); box-shadow: var(--shadow); transition: var(--transition);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
+                        <h3 style="font-size: 1.3rem; color: var(--gray-900); margin-bottom: 1rem; font-weight: 600;">技术咨询</h3>
+                        <p style="color: var(--gray-500); line-height: 1.8; margin-bottom: 1.2rem;">提供专业的技术咨询服务，帮助客户解决技术难题</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 需求分析</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 可行性研究</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 技术评估</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff; border-radius: var(--radius); padding: 2.5rem; border: 1px solid var(--gray-200); box-shadow: var(--shadow); transition: var(--transition);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📐</div>
+                        <h3 style="font-size: 1.3rem; color: var(--gray-900); margin-bottom: 1rem; font-weight: 600;">方案设计</h3>
+                        <p style="color: var(--gray-500); line-height: 1.8; margin-bottom: 1.2rem;">根据客户需求设计最优的技术实施方案</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 方案规划</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 系统设计</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 配置优化</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff; border-radius: var(--radius); padding: 2.5rem; border: 1px solid var(--gray-200); box-shadow: var(--shadow); transition: var(--transition);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚙️</div>
+                        <h3 style="font-size: 1.3rem; color: var(--gray-900); margin-bottom: 1rem; font-weight: 600;">安装调试</h3>
+                        <p style="color: var(--gray-500); line-height: 1.8; margin-bottom: 1.2rem;">专业团队提供设备安装和调试服务</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 设备安装</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 系统调试</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 性能优化</li>
+                        </ul>
+                    </div>
+                    <div style="background: #fff; border-radius: var(--radius); padding: 2.5rem; border: 1px solid var(--gray-200); box-shadow: var(--shadow); transition: var(--transition);">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎓</div>
+                        <h3 style="font-size: 1.3rem; color: var(--gray-900); margin-bottom: 1rem; font-weight: 600;">技术培训</h3>
+                        <p style="color: var(--gray-500); line-height: 1.8; margin-bottom: 1.2rem;">提供全面的技术培训服务</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 操作培训</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 维护培训</li>
+                            <li style="padding: 0.5rem 0; color: var(--gray-700); font-size: 0.95rem;">✓ 故障排除</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务流程 -->
+    <section style="background: var(--gray-50); padding: 5rem 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span style="display: inline-block; padding: 0.4rem 1.2rem; border-radius: 2rem; background: #e8f4fd; color: #3498db; font-size: 0.85rem; font-weight: 500; margin-bottom: 1rem;">服务流程</span>
+                <h2 style="font-size: 2.2rem; color: var(--gray-900); font-weight: 700; margin-bottom: 1rem;">技术服务流程</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem;">
+                <div style="text-align: center; padding: 2rem; position: relative;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: #3498db; color: #fff; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">1</div>
+                    <h3 style="font-size: 1.1rem; color: var(--gray-900); margin-bottom: 0.8rem; font-weight: 600;">需求沟通</h3>
+                    <p style="color: var(--gray-500); font-size: 0.9rem; line-height: 1.7;">深入了解客户需求，明确技术要求和目标</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; position: relative;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: #3498db; color: #fff; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">2</div>
+                    <h3 style="font-size: 1.1rem; color: var(--gray-900); margin-bottom: 0.8rem; font-weight: 600;">方案设计</h3>
+                    <p style="color: var(--gray-500); font-size: 0.9rem; line-height: 1.7;">制定详细的技术方案和实施计划</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; position: relative;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: #3498db; color: #fff; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">3</div>
+                    <h3 style="font-size: 1.1rem; color: var(--gray-900); margin-bottom: 0.8rem; font-weight: 600;">实施交付</h3>
+                    <p style="color: var(--gray-500); font-size: 0.9rem; line-height: 1.7;">专业团队实施，确保质量和进度</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; position: relative;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: #3498db; color: #fff; font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">4</div>
+                    <h3 style="font-size: 1.1rem; color: var(--gray-900); margin-bottom: 0.8rem; font-weight: 600;">培训支持</h3>
+                    <p style="color: var(--gray-500); font-size: 0.9rem; line-height: 1.7;">提供培训和技术支持，确保客户满意</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关产品 -->
+    <section style="padding: 5rem 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span style="display: inline-block; padding: 0.4rem 1.2rem; border-radius: 2rem; background: #e8f4fd; color: #3498db; font-size: 0.85rem; font-weight: 500; margin-bottom: 1rem;">相关产品</span>
+                <h2 style="font-size: 2.2rem; color: var(--gray-900); font-weight: 700; margin-bottom: 1rem;">推荐产品</h2>
+            </div>
+            <div class="products-full-grid" id="related-products">
+                <!-- 由JS动态加载 -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../contact.html" class="btn btn-primary" style="margin-right: 1rem; padding: 14px 36px; font-size: 1.05rem;">咨询此项服务</a>
+                <a href="index.html" class="btn btn-outline" style="padding: 14px 36px; font-size: 1.05rem;">返回产品中心</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo logo-light">
+                    <span class="logo-icon">⚙</span>
+                    <div class="logo-text">
+                        <strong>泓锦浩</strong>
+                        <small>机械科技</small>
+                    </div>
+                </a>
+                <p>专注精密机械领域，为您提供高品质的机械设备与技术服务解决方案。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速导航</h4>
+                <a href="../index.html">首页</a>
+                <a href="../about.html">关于我们</a>
+                <a href="index.html">产品中心</a>
+                <a href="../news/index.html">新闻动态</a>
+                <a href="../contact.html">联系我们</a>
+            </div>
+            <div class="footer-links">
+                <h4>产品服务</h4>
+                <a href="trade.html">贸易产品</a>
+                <a href="calibration.html">相机标定</a>
+                <a href="marble.html">精密大理石</a>
+                <a href="technical.html">技术服务</a>
+                <a href="instruments.html">仪器仪表</a>
+                <a href="consulting.html">管理咨询</a>
+            </div>
+            <div class="footer-contact">
+                <h4>联系方式</h4>
+                <p id="footer-phone">📞 加载中...</p>
+                <p id="footer-email">✉ 加载中...</p>
+                <p id="footer-address">📍 加载中...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 上海泓锦浩机械科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        if (typeof loadContactInfo === 'function') {
+            loadContactInfo();
+        }
+        
+        loadRelatedProducts();
+        
+        function loadRelatedProducts() {
+            const basePath = getBasePath();
+            fetch(basePath + 'assets/data/products.json')
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('无法加载产品');
+                })
+                .then(products => {
+                    const related = products.filter(p => 
+                        p.category === 'service'
+                    ).slice(0, 6);
+                    
+                    const grid = document.getElementById('related-products');
+                    if (grid) {
+                        grid.innerHTML = '';
+                        related.forEach(product => {
+                            const card = createProductCard(product);
+                            grid.appendChild(card);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.log('使用默认产品数据');
+                });
+        }
+        
+        function createProductCard(product) {
+            const div = document.createElement('div');
+            div.className = 'product-card';
+            
+            const imageUrl = product.image || (product.images && product.images.length > 0 
+                ? product.images[0].image 
+                : 'https://via.placeholder.com/400x300?text=Product');
+            const title = currentLang === 'zh' ? product.title_zh : (product.title_en || product.title_zh);
+            const summary = currentLang === 'zh' ? product.summary_zh : (product.summary_en || '');
+            
+            div.innerHTML = `
+                <div class="product-img">
+                    <img src="${imageUrl}" alt="${title}" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="product-body">
+                    <div class="product-cat">${product.category || ''}</div>
+                    <h3>${title}</h3>
+                    <p>${summary || ''}</p>
+                    <a href="detail.html?id=${product.slug}" class="card-link">查看详情 →</a>
+                </div>
+            `;
+            
+            return div;
+        }
+        
+        // 修复：classList (不是 classList)
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        });
+        
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
