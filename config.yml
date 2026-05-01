@@ -1,0 +1,122 @@
+backend:
+  name: github
+  repo: a304363915/hjh-website
+  branch: main
+  site_domain: hongjinhao.com
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+locale: zh-cn
+
+collections:
+  # 页面内容管理
+  - name: "pages"
+    label: "页面管理"
+    files:
+      - name: "homepage"
+        label: "首页内容"
+        file: "_content/pages/homepage.md"
+        fields:
+          - {label: "Banner 标题", name: "banner_title", widget: "string"}
+          - {label: "Banner 副标题", name: "banner_subtitle", widget: "string"}
+          - {label: "Banner 图片", name: "banner_image", widget: "image"}
+          - {label: "公司简介标题", name: "about_title", widget: "string", default: "关于泓锦浩"}
+          - {label: "公司简介内容", name: "about_content", widget: "markdown"}
+          - {label: "推荐产品标题", name: "featured_products_title", widget: "string", default: "推荐产品"}
+
+      - name: "about"
+        label: "关于我们页面"
+        file: "_content/pages/about.md"
+        fields:
+          - {label: "页面标题", name: "title", widget: "string", default: "关于我们"}
+          - {label: "公司简介", name: "company_intro", widget: "markdown"}
+          - {label: "公司历史", name: "company_history", widget: "markdown"}
+          - {label: "企业文化", name: "company_culture", widget: "markdown"}
+          - {label: "资质证书", name: "certificates", widget: "list", fields: [{label: "证书图片", name: "image", widget: "image"}, {label: "证书名称", name: "name", widget: "string"}]}
+
+      - name: "contact"
+        label: "联系我们页面"
+        file: "_content/pages/contact.md"
+        fields:
+          - {label: "页面标题", name: "title", widget: "string", default: "联系我们"}
+          - {label: "公司地址", name: "address", widget: "string"}
+          - {label: "联系电话", name: "phone", widget: "string"}
+          - {label: "电子邮箱", name: "email", widget: "string"}
+          - {label: "地图嵌入代码", name: "map_embed", widget: "text"}
+
+  # 产品分类管理
+  - name: "categories"
+    label: "产品分类"
+    label_singular: "分类"
+    folder: "_content/categories"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - {label: "分类名称（中文）", name: "title_zh", widget: "string", required: true}
+      - {label: "分类名称（英文）", name: "title_en", widget: "string"}
+      - {label: "分类简称（URL）", name: "slug", widget: "string", required: true, hint: "用于URL，如：hydraulic-machinery"}
+      - {label: "分类图片", name: "image", widget: "image"}
+      - {label: "分类描述（中文）", name: "description_zh", widget: "text"}
+      - {label: "分类描述（英文）", name: "description_en", widget: "text"}
+      - {label: "排序权重", name: "weight", widget: "number", default: 0, hint: "数字越大越靠前"}
+      - {label: "发布状态", name: "published", widget: "boolean", default: true}
+
+  # 产品管理
+  - name: "products"
+    label: "产品管理"
+    label_singular: "产品"
+    folder: "_content/products"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title_zh}} ({{model}})"
+    fields:
+      - {label: "产品名称（中文）", name: "title_zh", widget: "string", required: true}
+      - {label: "产品名称（英文）", name: "title_en", widget: "string"}
+      - {label: "产品型号", name: "model", widget: "string", required: true}
+      - {label: "所属分类", name: "category", widget: "relation", collection: "categories", valueField: "slug", searchFields: ["title_zh"], multiple: false, required: true}
+      - {label: "产品图片", name: "images", widget: "list", fields: [{label: "图片", name: "image", widget: "image"}, {label: "图片说明", name: "caption", widget: "string"}]}
+      - {label: "产品简介（中文）", name: "summary_zh", widget: "text"}
+      - {label: "产品简介（英文）", name: "summary_en", widget: "text"}
+      - {label: "产品详细描述（中文）", name: "description_zh", widget: "markdown"}
+      - {label: "产品详细描述（英文）", name: "description_en", widget: "markdown"}
+      - {label: "技术参数", name: "specs", widget: "list", fields: [{label: "参数名（中文）", name: "name_zh", widget: "string"}, {label: "参数名（英文）", name: "name_en", widget: "string"}, {label: "参数值", name: "value", widget: "string"}]}
+      - {label: "应用领域", name: "applications", widget: "list", fields: [{label: "应用", name: "application", widget: "string"}]}
+      - {label: "排序权重", name: "weight", widget: "number", default: 0}
+      - {label: "发布状态", name: "published", widget: "boolean", default: true}
+      - {label: "首页推荐", name: "featured", widget: "boolean", default: false}
+
+  # 新闻动态
+  - name: "news"
+    label: "新闻动态"
+    label_singular: "新闻"
+    folder: "_content/news"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "标题（中文）", name: "title_zh", widget: "string", required: true}
+      - {label: "标题（英文）", name: "title_en", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime", default: ""}
+      - {label: "封面图片", name: "cover_image", widget: "image"}
+      - {label: "正文内容（中文）", name: "content_zh", widget: "markdown"}
+      - {label: "正文内容（英文）", name: "content_en", widget: "markdown"}
+      - {label: "发布状态", name: "published", widget: "boolean", default: true}
+
+  # 留言管理
+  - name: "messages"
+    label: "留言管理"
+    label_singular: "留言"
+    folder: "_content/messages"
+    create: false
+    slug: "{{slug}}"
+    summary: "{{name}} - {{date}}"
+    fields:
+      - {label: "姓名", name: "name", widget: "string"}
+      - {label: "电话", name: "phone", widget: "string"}
+      - {label: "邮箱", name: "email", widget: "string"}
+      - {label: "咨询产品", name: "product", widget: "string"}
+      - {label: "留言内容", name: "message", widget: "text"}
+      - {label: "提交日期", name: "date", widget: "datetime"}
+      - {label: "处理状态", name: "status", widget: "select", options: ["未处理", "已联系", "已处理"], default: "未处理"}
+      - {label: "处理备注", name: "notes", widget: "text"}
