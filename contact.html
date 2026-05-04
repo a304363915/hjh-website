@@ -95,27 +95,69 @@
                 <!-- 联系表单 -->
                 <div class="contact-form-wrap">
                     <h3>在线咨询</h3>
-                    <form id="contact-form">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Access Key（替换为你自己的） -->
+                        <input type="hidden" name="access_key" value="06b71f86-adb9-47dd-ba6b-44a08e0d2567">
+                        <!-- 发送到你的邮箱 -->
+                        <input type="hidden" name="subject" value="泓锦浩网站新咨询">
+                        <input type="hidden" name="from_name" value="泓锦浩网站留言">
+                        
                         <div class="form-row">
                             <div class="form-group">
                                 <label>姓名</label>
-                                <input type="text" required>
+                                <input type="text" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label>电话</label>
-                                <input type="tel" required>
+                                <input type="tel" name="phone" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>邮箱</label>
-                            <input type="email" required>
+                            <input type="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label>留言内容</label>
-                            <textarea required></textarea>
+                            <textarea name="message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary form-submit">提交咨询</button>
+                        <div id="form-status" style="text-align:center;padding:10px;margin-bottom:12px;border-radius:8px;display:none;"></div>
+                        <button type="submit" class="btn btn-primary form-submit" id="submit-btn">提交咨询</button>
                     </form>
+                    <script>
+                    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        const btn = document.getElementById('submit-btn');
+                        const status = document.getElementById('form-status');
+                        btn.textContent = '提交中...';
+                        btn.disabled = true;
+                        status.style.display = 'none';
+                        
+                        try {
+                            const resp = await fetch(this.action, {
+                                method: 'POST',
+                                body: new FormData(this),
+                                headers: { 'Accept': 'application/json' }
+                            });
+                            const json = await resp.json();
+                            if (json.success) {
+                                status.style.display = 'block';
+                                status.style.background = '#e8f8e8';
+                                status.style.color = '#27ae60';
+                                status.textContent = '✅ 留言已成功发送，我们会尽快与您联系！';
+                                this.reset();
+                            } else {
+                                throw new Error(json.message || '发送失败');
+                            }
+                        } catch (err) {
+                            status.style.display = 'block';
+                            status.style.background = '#fde8e8';
+                            status.style.color = '#e74c3c';
+                            status.textContent = '❌ 发送失败，请稍后重试或直接电话联系';
+                        }
+                        btn.textContent = '提交咨询';
+                        btn.disabled = false;
+                    });
+                    </script>
                 </div>
             </div>
         </div>
