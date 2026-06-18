@@ -49,6 +49,15 @@ function switchLang(lang) {
     // 重新加载内容
     loadPageContent();
     loadFeaturedProducts();
+    applyStaticTranslations();
+}
+
+// 应用静态多语言文本（data-zh / data-en）
+function applyStaticTranslations() {
+    document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+        const text = currentLang === 'zh' ? el.getAttribute('data-zh') : el.getAttribute('data-en');
+        if (text) el.textContent = text;
+    });
 }
 
 // ==================== 移动端菜单 ====================
