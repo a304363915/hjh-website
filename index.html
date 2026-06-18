@@ -23,38 +23,52 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": ["Organization", "LocalBusiness"],
-        "name": "上海泓锦浩机械科技有限公司",
-        "alternateName": "泓锦浩机械科技",
-        "url": "https://www.hongjinhao.com/",
-        "logo": "https://www.hongjinhao.com/assets/images/logo.png",
-        "description": "专业提供高精度大理石检测平台、相机标定板、精密数控机床工作台等精密机械产品与技术服务",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "逸仙路2816号1幢1层",
-            "addressLocality": "上海市",
-            "addressRegion": "上海市宝山区",
-            "postalCode": "",
-            "addressCountry": "CN"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+86-152-0000-2671",
-            "contactType": "sales",
-            "availableLanguage": ["Chinese"]
-        },
-        "sameAs": [],
-        "foundingDate": "2014",
-        "areaServed": "CN",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "产品与服务",
-            "itemListElement": [
-                { "@type": "OfferCatalog", "name": "相机标定", "description": "棋盘格/ArUco/ChArUco标定板及标定服务" },
-                { "@type": "OfferCatalog", "name": "精密大理石", "description": "高精度大理石平台、检测靠铁、直角尺等" },
-                { "@type": "OfferCatalog", "name": "贸易产品", "description": "机械设备、仪器仪表、电子元器件等" }
-            ]
-        }
+        "@graph": [
+            {
+                "@type": ["Organization", "LocalBusiness"],
+                "name": "上海泓锦浩机械科技有限公司",
+                "alternateName": "泓锦浩机械科技",
+                "url": "https://www.hongjinhao.com/",
+                "logo": "https://www.hongjinhao.com/assets/images/logo.png",
+                "description": "专业提供高精度大理石检测平台、相机标定板、精密数控机床工作台等精密机械产品与技术服务",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "逸仙路2816号1幢1层",
+                    "addressLocality": "上海市",
+                    "addressRegion": "上海市宝山区",
+                    "postalCode": "",
+                    "addressCountry": "CN"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+86-152-0000-2671",
+                    "contactType": "sales",
+                    "availableLanguage": ["Chinese"]
+                },
+                "sameAs": [],
+                "foundingDate": "2014",
+                "areaServed": "CN",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "产品与服务",
+                    "itemListElement": [
+                        { "@type": "OfferCatalog", "name": "相机标定", "description": "棋盘格/ArUco/ChArUco标定板及标定服务" },
+                        { "@type": "OfferCatalog", "name": "精密大理石", "description": "高精度大理石平台、检测靠铁、直角尺等" },
+                        { "@type": "OfferCatalog", "name": "贸易产品", "description": "机械设备、仪器仪表、电子元器件等" }
+                    ]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "url": "https://www.hongjinhao.com/",
+                "name": "上海泓锦浩机械科技有限公司",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://www.hongjinhao.com/products/index.html?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            }
+        ]
     }
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -377,9 +391,9 @@
             </div>
             <div class="footer-contact">
                 <h4>联系方式</h4>
-                <p id="footer-phone">📞 加载中...</p>
-                <p id="footer-email">✉ 加载中...</p>
-                <p id="footer-address">📍 加载中...</p>
+                <p id="footer-phone">📞 15200002671</p>
+                <p id="footer-email">✉ hujingchang@hongjinhao.com</p>
+                <p id="footer-address">📍 上海市宝山区逸仙路2816号1幢1层</p>
             </div>
         </div>
         <div class="footer-bottom">
