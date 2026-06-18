@@ -360,10 +360,13 @@ async function loadContactInfo() {
             }
         }
     } catch (error) {
-        // 使用默认联系信息
-        updateElement('footer-phone', '021-XXXX-XXXX');
-        updateElement('footer-email', 'info@hongjinhao.com');
-        updateElement('footer-address', '上海市XX区XX路XX号');
+        // 使用默认联系信息（与 HTML 静态内容保持一致，避免覆盖为占位符）
+        updateElement('footer-phone', '15200002671');
+        updateElement('footer-email', 'hujingchang@hongjinhao.com');
+        updateElement('footer-address', '上海市宝山区逸仙路2816号1幢1层');
+        updateElement('contact-phone', '15200002671');
+        updateElement('contact-email', 'hujingchang@hongjinhao.com');
+        updateElement('contact-address', '上海市宝山区逸仙路2816号1幢1层');
     }
 }
 
