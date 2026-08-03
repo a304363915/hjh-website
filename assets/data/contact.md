@@ -1,5 +1,4 @@
 ---
-phone: "15200002671"
 email: "hujingchang@hongjinhao.com"
 address: "上海市宝山区逸仙路2816号1幢1层"
 ---

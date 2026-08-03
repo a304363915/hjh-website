@@ -355,10 +355,6 @@ async function loadContactInfo() {
             const text = await response.text();
             const content = parseMarkdown(text);
             
-            if (content.phone) {
-                updateElement('footer-phone', content.phone);
-                updateElement('contact-phone', content.phone);
-            }
             if (content.email) {
                 updateElement('footer-email', content.email);
                 updateElement('contact-email', content.email);
@@ -370,10 +366,8 @@ async function loadContactInfo() {
         }
     } catch (error) {
         // 使用默认联系信息（与 HTML 静态内容保持一致，避免覆盖为占位符）
-        updateElement('footer-phone', '15200002671');
         updateElement('footer-email', 'hujingchang@hongjinhao.com');
         updateElement('footer-address', '上海市宝山区逸仙路2816号1幢1层');
-        updateElement('contact-phone', '15200002671');
         updateElement('contact-email', 'hujingchang@hongjinhao.com');
         updateElement('contact-address', '上海市宝山区逸仙路2816号1幢1层');
     }
@@ -430,40 +424,31 @@ function parseMarkdown(text) {
 function getDefaultCategories() {
     return [
         {
-            title_zh: '液压机械',
-            title_en: 'Hydraulic Machinery',
-            slug: 'hydraulic-machinery',
-            image: 'https://via.placeholder.com/400x300?text=Hydraulic',
-            description_zh: '专业液压机械设备',
+            title_zh: '相机标定',
+            title_en: 'Camera Calibration',
+            slug: 'calibration',
+            image: 'https://via.placeholder.com/400x300?text=Calibration',
+            description_zh: '高精度相机标定板及标定服务',
             published: true,
             weight: 0
         },
         {
-            title_zh: '数控设备',
-            title_en: 'CNC Equipment',
-            slug: 'cnc-equipment',
-            image: 'https://via.placeholder.com/400x300?text=CNC',
-            description_zh: '高精度数控设备',
+            title_zh: '精密大理石',
+            title_en: 'Precision Marble',
+            slug: 'marble',
+            image: 'https://via.placeholder.com/400x300?text=Marble',
+            description_zh: '高精度大理石平台及精密工具',
             published: true,
             weight: 1
         },
         {
-            title_zh: '切割设备',
-            title_en: 'Cutting Equipment',
-            slug: 'cutting-equipment',
-            image: 'https://via.placeholder.com/400x300?text=Cutting',
-            description_zh: '高效切割解决方案',
+            title_zh: '贸易产品',
+            title_en: 'Trade Products',
+            slug: 'trade',
+            image: 'https://via.placeholder.com/400x300?text=Trade',
+            description_zh: '多品类工业贸易产品采购服务',
             published: true,
             weight: 2
-        },
-        {
-            title_zh: '精密仪器',
-            title_en: 'Precision Instruments',
-            slug: 'precision-instruments',
-            image: 'https://via.placeholder.com/400x300?text=Instruments',
-            description_zh: '高精度精密测量仪器',
-            published: true,
-            weight: 3
         }
     ];
 }
@@ -471,58 +456,10 @@ function getDefaultCategories() {
 function getDefaultProducts() {
     return [
         {
-            title_zh: '液压冲床 HC-100',
-            title_en: 'Hydraulic Press HC-100',
-            model: 'HC-100',
-            category: 'hydraulic-machinery',
-            slug: 'hc-100',
-            image: 'https://images.unsplash.com/photo-1581092160607-ee3388b1c028?w=400&h=300&fit=crop',
-            summary_zh: '高效液压冲床，适用于各种金属加工场景，压力可达100吨。',
-            summary_en: 'High-efficiency hydraulic press suitable for various metal processing scenarios, pressure up to 100 tons.',
-            featured: true,
-            specs: [
-                {name_zh: '额定压力', name_en: 'Rated Pressure', value: '100吨'},
-                {name_zh: '功率', name_en: 'Power', value: '15kW'}
-            ],
-            published: true
-        },
-        {
-            title_zh: '数控车床 CL-200',
-            title_en: 'CNC Lathe CL-200',
-            model: 'CL-200',
-            category: 'cnc-equipment',
-            slug: 'cl-200',
-            image: 'https://images.unsplash.com/photo-1504328345607-3aa3b0aa7b3?w=400&h=300&fit=crop',
-            summary_zh: '高精度数控车床，适用于精密零件加工。',
-            summary_en: 'High-precision CNC lathe suitable for precision parts machining.',
-            featured: true,
-            specs: [
-                {name_zh: '加工直径', name_en: 'Machining Diameter', value: '200mm'},
-                {name_zh: '主轴转速', name_en: 'Spindle Speed', value: '3000rpm'}
-            ],
-            published: true
-        },
-        {
-            title_zh: '激光切割机 LC-300',
-            title_en: 'Laser Cutting Machine LC-300',
-            model: 'LC-300',
-            category: 'cutting-equipment',
-            slug: 'lc-300',
-            image: 'https://images.unsplash.com/photo-1581092335397-9583e4b6c1e6?w=400&h=300&fit=crop',
-            summary_zh: '高精度激光切割设备，切割精度可达0.01mm。',
-            summary_en: 'High-precision laser cutting equipment with cutting accuracy up to 0.01mm.',
-            featured: true,
-            specs: [
-                {name_zh: '激光功率', name_en: 'Laser Power', value: '3000W'},
-                {name_zh: '切割厚度', name_en: 'Cutting Thickness', value: '20mm'}
-            ],
-            published: true
-        },
-        {
             title_zh: '标定板 BP-100',
             title_en: 'Calibration Target BP-100',
             model: 'BP-100',
-            category: 'precision-instruments',
+            category: 'calibration',
             slug: 'bp-100',
             image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop',
             summary_zh: '高精度相机标定板，适用于机器视觉、自动驾驶等领域。',
@@ -538,7 +475,7 @@ function getDefaultProducts() {
             title_zh: '精密大理石平台 PM-200',
             title_en: 'Precision Marble Platform PM-200',
             model: 'PM-200',
-            category: 'precision-instruments',
+            category: 'marble',
             slug: 'pm-200',
             image: 'https://images.unsplash.com/photo-1581092160607-ee3388b1c028?w=400&h=300&fit=crop',
             summary_zh: '高精度大理石平台，适用于精密测量和检测。',
@@ -547,6 +484,22 @@ function getDefaultProducts() {
             specs: [
                 {name_zh: '平面度', name_en: 'Flatness', value: '±0.005mm'},
                 {name_zh: '尺寸', name_en: 'Dimensions', value: '2000x1000mm'}
+            ],
+            published: true
+        },
+        {
+            title_zh: '工业贸易产品',
+            title_en: 'Industrial Trade Products',
+            model: 'TR-001',
+            category: 'trade',
+            slug: 'trade-products',
+            image: 'https://images.unsplash.com/photo-1581092160607-ee3388b1c028?w=400&h=300&fit=crop',
+            summary_zh: '机械设备、仪器仪表、电子元器件等多品类工业贸易产品，按需采购。',
+            summary_en: 'Multi-category industrial trade products, procured on demand.',
+            featured: true,
+            specs: [
+                {name_zh: '产品类别', name_en: 'Categories', value: '机械设备/仪器仪表/电子元器件等'},
+                {name_zh: '采购模式', name_en: 'Mode', value: '按需采购'}
             ],
             published: true
         }

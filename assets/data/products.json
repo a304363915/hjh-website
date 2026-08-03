@@ -1,102 +1,9 @@
 [
   {
-    "title_zh": "液压冲床 HC-100",
-    "title_en": "Hydraulic Press HC-100",
-    "model": "HC-100",
-    "category": "hydraulic-machinery",
-    "slug": "hc-100",
-    "images": [
-      {
-        "image": "https://via.placeholder.com/400x300?text=HC-100",
-        "caption": "HC-100 液压冲床"
-      }
-    ],
-    "summary_zh": "高效液压冲床，适用于各种金属加工场景，压力可达100吨。",
-    "summary_en": "Efficient hydraulic press suitable for various metal processing scenarios, pressure up to 100 tons.",
-    "description_zh": "## 产品介绍\n\nHC-100 液压冲床采用先进的液压系统，具有压力大、精度高、操作简便等特点。\n\n## 应用领域\n\n- 金属冲压\n- 零件成型\n- 模具压制",
-    "description_en": "## Product Introduction\n\nHC-100 Hydraulic Press adopts advanced hydraulic system with features of high pressure, high precision and easy operation.",
-    "specs": [
-      {"name_zh": "额定压力", "name_en": "Rated Pressure", "value": "100吨"},
-      {"name_zh": "电机功率", "name_en": "Motor Power", "value": "15kW"},
-      {"name_zh": "工作台尺寸", "name_en": "Table Size", "value": "800x600mm"},
-      {"name_zh": "行程", "name_en": "Stroke", "value": "300mm"}
-    ],
-    "applications": [
-      {"application": "汽车制造"},
-      {"application": "航空航天"},
-      {"application": "电子制造"}
-    ],
-    "weight": 0,
-    "published": true,
-    "featured": true
-  },
-  {
-    "title_zh": "数控车床 CL-200",
-    "title_en": "CNC Lathe CL-200",
-    "model": "CL-200",
-    "category": "cnc-equipment",
-    "slug": "cl-200",
-    "images": [
-      {
-        "image": "https://via.placeholder.com/400x300?text=CL-200",
-        "caption": "CL-200 数控车床"
-      }
-    ],
-    "summary_zh": "高精度数控车床，加工直径200mm，适用于精密零件加工。",
-    "summary_en": "High-precision CNC lathe with machining diameter of 200mm, suitable for precision parts processing.",
-    "description_zh": "## 产品介绍\n\nCL-200 数控车床采用先进的数控系统，具有高精度、高效率、操作简便等特点。\n\n## 技术特点\n\n- 高精度主轴\n- 自动换刀系统\n- 全封闭防护",
-    "description_en": "## Product Introduction\n\nCL-200 CNC Lathe adopts advanced CNC system with features of high precision, high efficiency and easy operation.",
-    "specs": [
-      {"name_zh": "加工直径", "name_en": "Machining Diameter", "value": "200mm"},
-      {"name_zh": "主轴转速", "name_en": "Spindle Speed", "value": "3000rpm"},
-      {"name_zh": "电机功率", "name_en": "Motor Power", "value": "7.5kW"},
-      {"name_zh": "重量", "name_en": "Weight", "value": "1500kg"}
-    ],
-    "applications": [
-      {"application": "精密制造"},
-      {"application": "汽车零部件"},
-      {"application": "模具加工"}
-    ],
-    "weight": 1,
-    "published": true,
-    "featured": true
-  },
-  {
-    "title_zh": "激光切割机 LC-300",
-    "title_en": "Laser Cutting Machine LC-300",
-    "model": "LC-300",
-    "category": "cutting-equipment",
-    "slug": "lc-300",
-    "images": [
-      {
-        "image": "https://via.placeholder.com/400x300?text=LC-300",
-        "caption": "LC-300 激光切割机"
-      }
-    ],
-    "summary_zh": "高精度激光切割机，切割厚度可达20mm，适用于各种金属材料。",
-    "summary_en": "High-precision laser cutting machine, cutting thickness up to 20mm, suitable for various metal materials.",
-    "description_zh": "## 产品介绍\n\nLC-300 激光切割机采用先进的光纤激光技术，具有切割精度高、速度快、效果好等特点。",
-    "description_en": "## Product Introduction\n\nLC-300 Laser Cutting Machine adopts advanced fiber laser technology with features of high cutting precision, fast speed and good effect.",
-    "specs": [
-      {"name_zh": "激光功率", "name_en": "Laser Power", "value": "3000W"},
-      {"name_zh": "切割厚度", "name_en": "Cutting Thickness", "value": "20mm"},
-      {"name_zh": "切割速度", "name_en": "Cutting Speed", "value": "0-20m/min"},
-      {"name_zh": "工作区域", "name_en": "Working Area", "value": "1500x3000mm"}
-    ],
-    "applications": [
-      {"application": "钣金加工"},
-      {"application": "机箱机柜"},
-      {"application": "五金制品"}
-    ],
-    "weight": 2,
-    "published": true,
-    "featured": false
-  },
-  {
     "title_zh": "标定板 BP-100",
     "title_en": "Calibration Plate BP-100",
     "model": "BP-100",
-    "category": "precision-instruments",
+    "category": "calibration",
     "slug": "bp-100",
     "images": [
       {
@@ -119,7 +26,7 @@
       {"application": "精密测量"},
       {"application": "设备校准"}
     ],
-    "weight": 3,
+    "weight": 0,
     "published": true,
     "featured": true
   },
@@ -127,7 +34,7 @@
     "title_zh": "精密大理石平台 PM-200",
     "title_en": "Precision Marble Platform PM-200",
     "model": "PM-200",
-    "category": "precision-instruments",
+    "category": "marble",
     "slug": "pm-200",
     "images": [
       {
@@ -150,7 +57,38 @@
       {"application": "精密测量"},
       {"application": "光学检测"}
     ],
-    "weight": 4,
+    "weight": 1,
+    "published": true,
+    "featured": true
+  },
+  {
+    "title_zh": "工业贸易产品",
+    "title_en": "Industrial Trade Products",
+    "model": "TR-001",
+    "category": "trade",
+    "slug": "trade-products",
+    "images": [
+      {
+        "image": "https://via.placeholder.com/400x300?text=Trade",
+        "caption": "工业贸易产品"
+      }
+    ],
+    "summary_zh": "机械设备、仪器仪表、电子元器件、金属制品等多品类工业贸易产品，按需采购，快速响应。",
+    "summary_en": "Multi-category industrial trade products including mechanical equipment, instruments, electronic components, and metal products. Procured on demand with fast response.",
+    "description_zh": "## 服务介绍\n\n依托完善的供应链体系，为您提供机械设备及零部件、智能仪器仪表、电子元器件、通信设备及模具等多品类工业贸易产品采购服务。\n\n## 服务优势\n\n- 多品类一站式采购\n- 国内外优质品牌资源\n- 按需配置，快速响应\n- 专业团队全程跟踪",
+    "description_en": "## Service Introduction\n\nWith a well-established supply chain, we provide procurement services for multi-category industrial trade products including mechanical equipment and components, intelligent instruments, electronic components, communication equipment, and molds.",
+    "specs": [
+      {"name_zh": "产品类别", "name_en": "Product Categories", "value": "机械设备/仪器仪表/电子元器件等"},
+      {"name_zh": "采购模式", "name_en": "Procurement Mode", "value": "按需采购"},
+      {"name_zh": "响应时间", "name_en": "Response Time", "value": "24小时内"},
+      {"name_zh": "服务范围", "name_en": "Service Scope", "value": "全国"}
+    ],
+    "applications": [
+      {"application": "工业制造"},
+      {"application": "设备配套"},
+      {"application": "企业采购"}
+    ],
+    "weight": 2,
     "published": true,
     "featured": true
   }

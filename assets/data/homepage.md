@@ -1,8 +1,8 @@
 ---
 banner_title: "欢迎来到上海泓锦浩"
 banner_title_en: "Welcome to Shanghai Hongjinhao"
-banner_subtitle: "专注精密机械领域，为您提供高品质的机械设备与技术服务解决方案"
-banner_subtitle_en: "Focus on precision machinery, providing you with high-quality equipment and technical solutions"
+banner_subtitle: "专注贸易产品、相机标定、精密大理石三大核心领域，为您提供专业可靠的产品与采购服务"
+banner_subtitle_en: "Focus on trade products, camera calibration, and precision marble - providing professional and reliable products and procurement services"
 ---
 
 # 首页内容
